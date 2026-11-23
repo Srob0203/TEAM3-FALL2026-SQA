@@ -7,15 +7,27 @@ import importlib.util
 import sys
 from pathlib import Path
 import atheris
+
 #remove import
 
 from typing import get_origin, get_args
 
+invocation_counts = {}
+completion_counts = {} #counters for debugging/comprehension
+error_counts = {} 
+in_progress = {}
+exception_details = {}
+
 #configurations/selection (output file, functions, source, random seed)
 TARGET_FILE = "fuzz_targets.json"
+TEST_DATA_DIR = "/testing_materials"
+SCRIPT_TEST_DIR = "/testing_materials/scripts"
 MAX_FUNCTIONS = 10
 RANDOM_SEED = 42
 SOURCE_DIRECTORY = "KubeSec-master"
+STATS_FILE = "fuzzing_stats.json"
+SAVE_INTERVAL = 100
+total_invocations = 0
 #these don't have anything worth testing
 EXCLUDED_DIRS = {
     ".venv",
@@ -304,50 +316,89 @@ This is a heuristic approach and may not always be accurate. """
 
 def prepare_arguments(function, fdp):
 
-    signature = inspect.signature(function)
-
-    """Prepare arguments for a function based on its signature and fuzzed data"""
-
     args = []
-
     kwargs = {}
 
-    for name, param in signature.parameters.items():
+    signature = inspect.signature(function)
 
-        #skip parameters that Python supplies automatically
-
+    for param in signature.parameters.values():
+        # Skip *args and **kwargs for now
+        print(f"Parameter name: {param.name}", flush=True)
+        print(f"Parameter kind: {param.kind}", flush=True)
         if param.kind in (
-
             inspect.Parameter.VAR_POSITIONAL,
-
             inspect.Parameter.VAR_KEYWORD
-
         ):
-
             continue
 
-        #use annotations when available
+        annotation = param.annotation
 
-        if param.annotation != inspect.Parameter.empty:
+        
 
-            value = generate_argument(param.annotation, fdp)
 
-        #otherwise, infer from the parameter name
+        # If no annotation exists, infer the type from its default
+        if annotation == inspect.Parameter.empty:
+            if param.default != inspect.Parameter.empty:
+                annotation = type(param.default)
+
+        # Generate an input based on the expected type
+        if param.name == "script_path":
+                    
+                    value = str(SCRIPT_TEST_DIR) #recall where you put this
+                   
+                    print(f"Using test directory: {value}", flush=True)
+
+        elif annotation in (str, "str"):
+            value = fdp.ConsumeUnicode(100)
+
+        elif annotation in (bool, "bool"):
+            value = fdp.ConsumeBool()
+
+        elif annotation in (int, "int"):
+            value = fdp.ConsumeInt(4)
+
+        elif annotation in (float, "float"):
+            value = fdp.ConsumeFloat()
+
+        elif annotation in (bytes, "bytes"):
+            value = fdp.ConsumeBytes(100)
 
         else:
+            # Fallback for unannotated or unsupported parameters
+            value = fdp.ConsumeUnicode(100)
 
-            value = generate_by_name(name, fdp)
-
+        # Place the value in the correct argument position
         if param.kind == inspect.Parameter.KEYWORD_ONLY:
-
-            kwargs[name] = value
-
+            kwargs[param.name] = value
         else:
-
             args.append(value)
+
+    print(f"Generated args: {args}", flush=True)
+    print(f"Generated kwargs: {kwargs}", flush=True)
 
     return args, kwargs
 
+def save_statistics():
+    stats = {
+        "total_invocations": total_invocations,
+        "functions": {}
+    }
+
+    for name in invocation_counts:
+        stats["functions"][name] = {
+            "calls": invocation_counts[name],
+            "completed": completion_counts.get(name, 0),
+            "errors": error_counts.get(name, 0),
+            "in_progress": in_progress.get(name, 0),
+            "exception_details": exception_details.get(name, [])
+        }
+
+    temp_file = STATS_FILE + ".tmp"
+
+    with open(temp_file, "w") as f:
+        json.dump(stats, f, indent=4)
+
+    os.replace(temp_file, STATS_FILE)
 
 def load_target_functions(targets):
 
@@ -416,12 +467,6 @@ def load_target_functions(targets):
 
             signature = inspect.signature(function)
 
-
-
-
-
-
-
             #enable coverage instrumentation.
 
             atheris.instrument_func(function)
@@ -451,15 +496,47 @@ def TestOneInput(data):
 
     # Run every selected function for each input instead of choosing one.
     # A fresh provider gives each function its own read position.
-    for function in target_functions:
+
+    shuffled_targets = target_functions.copy()
+    random.shuffle(shuffled_targets)
+
+    for function in shuffled_targets:
+        global total_invocations
         fdp = atheris.FuzzedDataProvider(data)
         args, kwargs = prepare_arguments(function, fdp)
+        name = function.__name__
+        invocation_counts[name] = invocation_counts.get(name, 0) + 1
+        in_progress[name] = in_progress.get(name, 0) + 1
+        save_statistics()
         print(f"Fuzzing function: {function.__name__}") #print for double checking
         # Unexpected exceptions are intentionally not caught for reporting.
-        function(*args, **kwargs)
+        try:
+            print(f"Testing directory: {args}", flush=True)
+            total_invocations += 1
+            function(*args, **kwargs)
+            completion_counts[name] = completion_counts.get(name, 0) + 1
+            print(f"Invocation counts: {invocation_counts}")
+            print(f"Completion counts: {completion_counts}")
+        except Exception as e:
+        # Record the exception for this function
+            error_counts[name] = error_counts.get(name, 0) + 1
+            print(f"{function.__name__}: {type(e).__name__}: {e}")
+            exception_details.setdefault(name, []).append({
+                "type": type(e).__name__,
+                "message": str(e)
+                                 })
+        finally:
+            in_progress[name] -= 1
+            save_statistics()
+        
+        
 
 
 if __name__ == "__main__":
+
+    print(f"FUZZ_DIR: {SOURCE_DIRECTORY}", flush=True)
+    print(f"SCRIPT_TEST_DIR: {SCRIPT_TEST_DIR}", flush=True)
+    print(f"Exists: {os.path.exists(SCRIPT_TEST_DIR)}", flush=True)
 
     targets = initialize_targets(SOURCE_DIRECTORY)
 

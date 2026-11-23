@@ -3,3 +3,4 @@ PyYAML
 ruamel.yaml
 requests
 pandas
+sarif-om

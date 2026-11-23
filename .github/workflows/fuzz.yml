@@ -1,0 +1,47 @@
+name: Atheris Fuzzing
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches: [main]
+
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  fuzz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r fuzzer/requirements.txt
+
+      - name: Run Atheris
+        working-directory: fuzzer
+        run: python fuzzer.py -max_total_time=180
+
+      - name: Save fuzzing results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fuzzing-results
+          path: |
+            fuzzer/fuzzing_stats.json
+            fuzzer/crash-*
+          if-no-files-found: warn
+          retention-days: 14

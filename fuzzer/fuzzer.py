@@ -10,7 +10,7 @@ import atheris
 
 #remove import
 
-from typing import get_origin, get_args
+#from typing import get_origin, get_args
 
 invocation_counts = {}
 completion_counts = {} #counters for debugging/comprehension

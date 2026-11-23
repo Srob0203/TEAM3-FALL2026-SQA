@@ -24,8 +24,8 @@ jobs:
         run: |
           pwd
           ls -la
-          ls -la fuzzer
-          ls -la KubeSec-master
+          ls -la ..
+          ls -la ../KubeSec-master
 
       - name: Check out repository
         uses: actions/checkout@v6

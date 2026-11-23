@@ -4,3 +4,4 @@ ruamel.yaml
 requests
 pandas
 sarif-om
+jschema_to_python

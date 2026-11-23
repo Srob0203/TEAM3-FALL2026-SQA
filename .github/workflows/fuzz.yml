@@ -22,10 +22,16 @@ jobs:
     steps:
       - name: Debug directory structure
         run: |
+          echo "Current directory:"
           pwd
-          ls -la .
-          ls -la ..
-          ls -la KubeSec-master
+          echo "Repository root contents:"
+          ls -la
+
+          echo "All directories:"
+          find . -maxdepth 3 -type d -print
+
+          echo "Tracked files:"
+          git ls-tree -r --name-only HEAD
 
       - name: Check out repository
         uses: actions/checkout@v6
@@ -41,8 +47,8 @@ jobs:
           pip install -r fuzzer/requirements.txt
 
       - name: Run Atheris
-        working-directory: fuzzer
-        run: python fuzzer.py -max_total_time=180
+        #working-directory: fuzzer
+        run: python fuzzer/fuzzer.py -max_total_time=180
 
       - name: Save fuzzing results
         if: always()

@@ -22,16 +22,14 @@ jobs:
     steps:
       - name: Debug directory structure
         run: |
-          echo "Current directory:"
-          pwd
-          echo "Repository root contents:"
-          ls -la
-
-          echo "All directories:"
-          find . -maxdepth 3 -type d -print
-
-          echo "Tracked files:"
-          git ls-tree -r --name-only HEAD
+         echo "Current directory:"
+         pwd
+         echo "Current directory contents:"
+         ls -la
+         echo "Parent directory contents:"
+         ls -la ..
+         echo "Directories under current location:"
+         find . -maxdepth 4 -type d -print
 
       - name: Check out repository
         uses: actions/checkout@v6

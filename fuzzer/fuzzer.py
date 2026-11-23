@@ -412,7 +412,7 @@ def load_target_functions(targets):
 
     for target in targets:
 
-        filepath = Path(target["file"]).resolve()
+        filepath = (PROJECT_DIR / target["file"]).resolve()
 
         if filepath not in modules:
 
@@ -551,8 +551,12 @@ if __name__ == "__main__":
         )
 
     with atheris.instrument_imports():
-
-        target_functions = load_target_functions(targets)
+       print(f"Script location: {Path(__file__).resolve()}")
+       print(f"Current working directory: {Path.cwd()}")
+       print(f"Fuzzer directory: {FUZZ_DIR}")
+       print(f"Parent directory: {FUZZ_DIR.parent}")
+       print(f"Target directory: {SOURCE_DIRECTORY}")
+       target_functions = load_target_functions(targets)
 
 
 

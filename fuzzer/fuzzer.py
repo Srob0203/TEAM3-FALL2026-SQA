@@ -19,12 +19,15 @@ in_progress = {}
 exception_details = {}
 
 #configurations/selection (output file, functions, source, random seed)
+FUZZ_DIR = Path(__file__).resolve().parent
+PROJECT_DIR = FUZZ_DIR.parent
 TARGET_FILE = "fuzz_targets.json"
-TEST_DATA_DIR = "/testing_materials"
-SCRIPT_TEST_DIR = "/testing_materials/scripts"
+TEST_DATA_DIR = PROJECT_DIR / "testing_materials"
+SCRIPT_TEST_DIR = PROJECT_DIR / "testing_materials/scripts"
 MAX_FUNCTIONS = 10
 RANDOM_SEED = 42
-SOURCE_DIRECTORY = "KubeSec-master"
+
+SOURCE_DIRECTORY = PROJECT_DIR / "KubeSec-master"
 STATS_FILE = "fuzzing_stats.json"
 SAVE_INTERVAL = 100
 total_invocations = 0

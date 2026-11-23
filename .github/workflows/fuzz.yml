@@ -23,9 +23,9 @@ jobs:
       - name: Debug directory structure
         run: |
           pwd
-          ls -la
           ls -la .
-          ls -la /KubeSec-master
+          ls -la ..
+          ls -la KubeSec-master
 
       - name: Check out repository
         uses: actions/checkout@v6

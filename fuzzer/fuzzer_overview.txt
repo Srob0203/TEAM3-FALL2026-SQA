@@ -1,0 +1,75 @@
+How does fuzzing work?
+
+Driver: fuzzer.py
+
+How to Run: Use a virtual environment. Once activated in the correct directory, 
+run this command: python fuzzer/fuzzer.py -max_total_time=30
+(-max_total_time=30 ensures that if program stalls, it quits eventually)
+
+How to tell if run was successful: If done locally, you should be able to locate 
+fuzzing_stats.json (after execution) and experience no errors/stalls during execution. Output is messy
+right now (I'll clean it up later), so please view fuzzing_stats.json.
+If done using GitHub Actions, check the actions tab. It runs automatically after every commit.
+
+
+Supporting Files/Folders: 
+
+1. testing_materials/ provides script files (some functions need scripts rather than generated Atheris inputs)
+2. fuzzer/requirements.txt (for GitHub Actions)
+3. .github/workflows/fuzz.yml (for GitHub Actions)
+4. saved_crashes/ has some crash data (though I forgot to document what function it crashed).
+    Atheris_output.png just shows an exception Atheris caught before I had fuzzer.py catch exceptions
+    sample_fuzz_output2.png is roughly what you should see when the program terminates successfully
+
+Overall process:
+1. fuzzer.py identifies candidate functions to be fuzzed.
+2. Then, functions are loaded and input signatures are found (if any)
+3. Inputs are generated with respect to each function
+4. Fuzzing is executed through Atheris (errors are caught to ensure all targets are fuzzed)
+5. Results collection: results are written to fuzzing_stats.json
+Output: fuzzing_stats.json (will appear after first run)
+
+Selected Functions:
+
+1. getItemFromSecret (KubeSec-master/scanner.py, line 231)
+    input: dictionary, integer
+    Fuzzing info: All executions resulted in AttributeErrors.
+2. readBashAsStr (KubeSec-master/graphtaint.py, line 119)
+    input: path/directory
+    Fuzzing info: All executions resulted in FileNotFoundErrors.
+3. constructHelmString (KubeSec-master/graphtaint.py, line 21)
+    input: tuple
+    Fuzzing info: Most executions resulted in ValueErrors
+4. scanForTruePID (KubeSec-master/scanner.py, line 542)
+    input: path
+    Fuzzing info: All executions resulted in FileNotFoundErrors
+5. getValuesRecursively (KubeSec-master/parser.py, line 77)
+    input: dictionary
+    Fuzzing info: No errors found.
+6. keyMiner (KubeSec-master/parser.py, line 34)
+    input: 
+    Fuzzing info:
+7. checkIfWeirdYAML (KubeSec-master/parser.py, line 24)
+    input:script/script path
+    Fuzzing info: no errors found
+8. getTaintsFromConfigMaps (KubeSec-master/graphtaint.py, line 125)
+    input: file path
+    Fuzzing info: No errors found
+9. scanForHostAliases (KubeSec-master/scanner.py, line 833)
+    input: script file path
+    Fuzzing info:All executions resulted in FileNotFoundErrors
+10. getSHFiles (KubeSec-master/graphtaint.py, line 108)
+    input:filepath
+    Fuzzing info:No errors found
+
+
+
+Required Dependencies (some of these are also simply needed for the provided project source code):
+
+atheris
+PyYAML
+ruamel.yaml
+requests
+pandas
+sarif-om
+jschema_to_python

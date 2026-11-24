@@ -1,0 +1,52 @@
+[
+    {
+        "file": "KubeSec-master/scanner.py",
+        "function": "getItemFromSecret",
+        "line": 231
+    },
+    {
+        "file": "KubeSec-master/graphtaint.py",
+        "function": "readBashAsStr",
+        "line": 119
+    },
+    {
+        "file": "KubeSec-master/graphtaint.py",
+        "function": "constructHelmString",
+        "line": 21
+    },
+    {
+        "file": "KubeSec-master/scanner.py",
+        "function": "scanForTruePID",
+        "line": 542
+    },
+    {
+        "file": "KubeSec-master/parser.py",
+        "function": "getValuesRecursively",
+        "line": 77
+    },
+    {
+        "file": "KubeSec-master/parser.py",
+        "function": "keyMiner",
+        "line": 34
+    },
+    {
+        "file": "KubeSec-master/parser.py",
+        "function": "checkIfWeirdYAML",
+        "line": 24
+    },
+    {
+        "file": "KubeSec-master/graphtaint.py",
+        "function": "getTaintsFromConfigMaps",
+        "line": 125
+    },
+    {
+        "file": "KubeSec-master/scanner.py",
+        "function": "scanForHostAliases",
+        "line": 833
+    },
+    {
+        "file": "KubeSec-master/graphtaint.py",
+        "function": "getSHFiles",
+        "line": 108
+    }
+]

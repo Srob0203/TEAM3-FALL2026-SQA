@@ -1,0 +1,1500 @@
+{
+    "total_invocations": 720,
+    "functions": {
+        "getValuesRecursively": {
+            "calls": 72,
+            "completed": 72,
+            "errors": 0,
+            "in_progress": 0,
+            "exception_details": []
+        },
+        "scanForTruePID": {
+            "calls": 72,
+            "completed": 0,
+            "errors": 72,
+            "in_progress": 0,
+            "exception_details": [
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '-'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'J'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\\n'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'K'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '7'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'D'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '7DD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '-'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '='"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '='"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u2fb6'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u23ff'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u21ff'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u21ff'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '7dD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'dDD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'dD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'D'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '77-'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '77&'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\ub7b7'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\\u2db7'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\\u2db7'"
+                }
+            ]
+        },
+        "getItemFromSecret": {
+            "calls": 72,
+            "completed": 0,
+            "errors": 72,
+            "in_progress": 0,
+            "exception_details": [
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                },
+                {
+                    "type": "AttributeError",
+                    "message": "'str' object has no attribute 'items'"
+                }
+            ]
+        },
+        "getSHFiles": {
+            "calls": 72,
+            "completed": 72,
+            "errors": 0,
+            "in_progress": 0,
+            "exception_details": []
+        },
+        "getTaintsFromConfigMaps": {
+            "calls": 72,
+            "completed": 72,
+            "errors": 0,
+            "in_progress": 0,
+            "exception_details": []
+        },
+        "readBashAsStr": {
+            "calls": 72,
+            "completed": 0,
+            "errors": 72,
+            "in_progress": 0,
+            "exception_details": [
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '-'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'J'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\\n'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'K'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '7'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'D'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '7DD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '-'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '='"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '='"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u2fb6'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u23ff'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u21ff'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u21ff'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '7dD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'dDD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'dD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'D'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '77-'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '77&'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\ub7b7'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\\u2db7'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\\u2db7'"
+                }
+            ]
+        },
+        "constructHelmString": {
+            "calls": 72,
+            "completed": 5,
+            "errors": 67,
+            "in_progress": 0,
+            "exception_details": [
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 2)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 0)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                },
+                {
+                    "type": "ValueError",
+                    "message": "not enough values to unpack (expected 3, got 1)"
+                }
+            ]
+        },
+        "checkIfWeirdYAML": {
+            "calls": 72,
+            "completed": 72,
+            "errors": 0,
+            "in_progress": 0,
+            "exception_details": []
+        },
+        "keyMiner": {
+            "calls": 72,
+            "completed": 72,
+            "errors": 0,
+            "in_progress": 0,
+            "exception_details": []
+        },
+        "scanForHostAliases": {
+            "calls": 72,
+            "completed": 0,
+            "errors": 72,
+            "in_progress": 0,
+            "exception_details": [
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '-'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'J'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\\n'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'K'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '7'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'D'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '7DD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '-'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '='"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '='"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u2fb6'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u23ff'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u21ff'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\u21ff'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '7dD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'dDD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'dD'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: 'D'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: ''"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '77-'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '77&'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\ub7b7'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\\u2db7'"
+                },
+                {
+                    "type": "FileNotFoundError",
+                    "message": "[Errno 2] No such file or directory: '\\u2db7'"
+                }
+            ]
+        }
+    }
+}

@@ -12,6 +12,10 @@ import numpy as np
 import json
 from sarif_om import *
 from jschema_to_python.to_json import to_json
+import time   # FORENSICS (4.b)
+from forensics_logger import get_logger, safe_repr   # FORENSICS (4.b)
+
+logger = get_logger()   # FORENSICS (4.b)
 
 '''Global SarifLog Object definition and Rule definition for SLI-KUBE. Rule IDs are ordered by the sequence as it appears in the TOSEM paper'''
 
@@ -160,8 +164,10 @@ def scanKeys(k_, val_lis):
     return hard_coded_keys    
 
 
-def scanForSecrets(yaml_d): 
-    key_lis, dic2ret_secret   = [], {} 
+def scanForSecrets(yaml_d):
+    logger.info("FORENSICS scanForSecrets START input_type=%s top_level_keys=%d", type(yaml_d).__name__,
+                len(yaml_d) if isinstance(yaml_d, dict) else -1)   # FORENSICS (4.b)
+    key_lis, dic2ret_secret   = [], {}
     parser.getKeyRecursively( yaml_d, key_lis )
     '''
     if you are using `parser.getKeyRecursively` to get all keys , you need to do some trnasformation to get the key names 
@@ -177,8 +183,12 @@ def scanForSecrets(yaml_d):
         keyList   = scanKeys( key_, value_list )
         # print(keyList)
         if( len(unameList) > 0  )  or ( len(passwList) > 0  ) or ( len(keyList) > 0  ) :
-            dic2ret_secret[key_] =  ( unameList, passwList, keyList ) 
+            dic2ret_secret[key_] =  ( unameList, passwList, keyList )
+            # values are deliberately NOT logged: only the key name and counts, so the log never leaks a secret
+            logger.warning("FORENSICS scanForSecrets SECRET_FOUND key=%s usernames=%d passwords=%d keys=%d",
+                           safe_repr(key_), len(unameList), len(passwList), len(keyList))   # FORENSICS (4.b)
     # print(dic2ret_secret)
+    logger.info("FORENSICS scanForSecrets END keys_scanned=%d keys_flagged=%d", len(key_lis), len(dic2ret_secret))   # FORENSICS (4.b)
     return dic2ret_secret
 
 
@@ -244,9 +254,12 @@ def scanSingleManifest( path_to_script ):
     While it is named as `scanSingleManifest` 
     it can only do taint tracking for secrets and over privileges 
     '''
+    logger.info("FORENSICS scanSingleManifest START path=%s", safe_repr(path_to_script))   # FORENSICS (4.b)
     checkVal = parser.checkIfValidK8SYaml( path_to_script )
-    # print(checkVal) 
-    # initializing 
+    logger.info("FORENSICS scanSingleManifest BRANCH path=%s valid_k8s=%s valid_helm=%s", safe_repr(path_to_script),
+                checkVal, parser.checkIfValidHelm(str(path_to_script)))   # FORENSICS (4.b)
+    # print(checkVal)
+    # initializing
     within_secret_ = []
     dict_secret    = {} 
     dict_list      = parser.loadMultiYAML( path_to_script )
@@ -302,7 +315,13 @@ def scanSingleManifest( path_to_script ):
     # for each key in dict_secret we extract the key, return the line number and extracted valid taints for the secret
 
     for key in dict_secret:
-        line_number = parser.show_line_for_paths(path_to_script, key)
+        try:
+            line_number = parser.show_line_for_paths(path_to_script, key)
+        except Exception as err_:
+            # FORENSICS (4.b): record the failure (e.g. yq missing, key absent from the json-path map) before re-raising
+            logger.error("FORENSICS scanSingleManifest LINE_LOOKUP_FAILED path=%s key=%s err_type=%s err=%s",
+                         safe_repr(path_to_script), safe_repr(key), type(err_).__name__, safe_repr(str(err_)))
+            raise
         for line in line_number:
             print(line)
             secret, template_secret, valid_taint = graphtaint.mineSecretGraph(path_to_script, yaml_dict, dict_secret)
@@ -320,9 +339,12 @@ def scanSingleManifest( path_to_script ):
     taint tracking for over privileges 
     '''
     #valid_taint_privi  = scanForOverPrivileges( path_to_script )
-    # print(valid_taint_privi) 
+    # print(valid_taint_privi)
 
-    return within_secret_, templ_secret_, valid_taint_secr 
+    logger.info("FORENSICS scanSingleManifest END path=%s within_unames=%d within_pwds=%d within_tokens=%d template_matches=%d valid_taints=%d",
+                safe_repr(path_to_script), len(within_secret_[0]), len(within_secret_[1]), len(within_secret_[2]),
+                len(templ_secret_), len(valid_taint_secr))   # FORENSICS (4.b)
+    return within_secret_, templ_secret_, valid_taint_secr
 
 
  
@@ -632,9 +654,14 @@ def scanDockerSock(path_script ):
     return dic  
 
 def runScanner(dir2scan):
-    all_content   = [] 
+    run_start     = time.time()   # FORENSICS (4.b)
+    logger.info("FORENSICS runScanner START dir=%s dir_exists=%s", safe_repr(dir2scan), os.path.isdir(str(dir2scan)))   # FORENSICS (4.b)
+    all_content   = []
     all_yml_files = getYAMLFiles(dir2scan)
-    val_cnt       = 0 
+    logger.info("FORENSICS runScanner FOUND yaml_files=%d", len(all_yml_files))   # FORENSICS (4.b)
+    if len(all_yml_files) == 0:
+        logger.warning("FORENSICS runScanner NO_YAML_FILES dir=%s (sarif_json will be unbound -> UnboundLocalError)", safe_repr(dir2scan))   # FORENSICS (4.b)
+    val_cnt       = 0
     for yml_ in all_yml_files:
         '''
         Need to filter out `.github/workflows.yml files` first 
@@ -725,17 +752,21 @@ def runScanner(dir2scan):
                 #     f.write(sarif_json)
 
                 all_content.append( ( dir2scan, yml_, within_secret_, templ_secret_, valid_taint_secr, valid_taint_privi, http_dict, absentSecuContextDict, defaultNameSpaceDict, absentResourceDict, rollingUpdateDict, absentNetPolicyDic, pid_dic, ipc_dic, dockersock_dic, host_net_dic, cap_sys_dic, host_alias_dic, allow_privi_dic, unconfied_seccomp_dict, cap_module_dic, k8s_flag, helm_flag ) )
+                logger.info("FORENSICS runScanner SCANNED file=%s k8s=%s helm=%s", safe_repr(yml_), k8s_flag, helm_flag)   # FORENSICS (4.b)
             else:
                 print("Invalid YAML --> ",yml_)
                 invalid_yaml.append(yml_)
+                logger.info("FORENSICS runScanner SKIPPED_INVALID file=%s", safe_repr(yml_))   # FORENSICS (4.b)
         else:
             print(" Weird YAML --> ",yml_)
             weird_yaml.append(yml_)
+            logger.info("FORENSICS runScanner SKIPPED_WEIRD file=%s", safe_repr(yml_))   # FORENSICS (4.b)
 
         sarif_json = to_json(sarif_log)
-        #print(sarif_json)       
+        #print(sarif_json)
 
-
+    logger.info("FORENSICS runScanner END scanned=%d invalid=%d weird=%d sarif_results=%d elapsed_sec=%.2f",
+                len(all_content), len(invalid_yaml), len(weird_yaml), len(run.results), time.time() - run_start)   # FORENSICS (4.b)
     return all_content, sarif_json
 
 

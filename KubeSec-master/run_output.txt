@@ -1,0 +1,76 @@
+
+
+--------------- FILE --------------
+	--> FORENSICS_DEMO/privileged-pod.yaml
+Kubernetes YAML
+Analyzing... FORENSICS_DEMO/privileged-pod.yaml COUNT: FORENSICS_DEMO/privileged-pod.yaml1
+get valid taint secrets
+get privileged security contexts
+get insecure HTTP
+ THIS IS HTTP KEY ---->  value
+This is the mapping for the Key value ---> .spec.containers[0].env[0].value
+get missing security context
+get use of default namespace
+This is the mapping for the Key namespace ---> .metadata.namespace
+get missing resource limit
+This is the mapping for the Key spec ---> .spec
+get absent rolling update count
+get absent network policy count
+This is the mapping for the Key spec ---> .spec
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+This is the mapping for the Key hostNetwork ---> .spec.hostNetwork
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> FORENSICS_DEMO/ansible-task.yml
+Invalid YAML -->  FORENSICS_DEMO/ansible-task.yml
+
+
+--------------- FILE --------------
+	--> FORENSICS_DEMO/db-secret.yaml
+Kubernetes YAML
+Analyzing... FORENSICS_DEMO/db-secret.yaml COUNT: FORENSICS_DEMO/db-secret.yaml2
+get valid taint secrets
+This is the mapping for the Key db_password ---> .data.db_password
+7
+This is the mapping for the Key db_user ---> .data.db_user
+6
+get privileged security contexts
+get insecure HTTP
+get missing security context
+get use of default namespace
+get missing resource limit
+get absent rolling update count
+get absent network policy count
+ get hostPIDs where True is assigned 
+get hostIPCs where True is assigned
+scan for docker sock paths: /var.run/docker.sock
+scan for hostNetwork where True is assigned 
+scan for CAP SYS
+scan for Host Aliases
+scan for allowPrivilegeEscalation
+scan for unconfied seccomp 
+ scan for cap sys module 
+ 
+
+---------------END FILE RUNNING--------------
+-----
+
+
+--------------- FILE --------------
+	--> FORENSICS_DEMO/broken.yaml
+skipping
+skipping
+Invalid YAML -->  FORENSICS_DEMO/broken.yaml

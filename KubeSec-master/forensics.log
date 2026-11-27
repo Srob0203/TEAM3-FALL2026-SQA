@@ -1,0 +1,252 @@
+2026-11-25 15:13:02,514 | INFO | scanner.runScanner:658 | FORENSICS runScanner START dir='FORENSICS_DEMO' dir_exists=True
+2026-11-25 15:13:02,515 | INFO | scanner.runScanner:661 | FORENSICS runScanner FOUND yaml_files=4
+2026-11-25 15:13:02,515 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,515 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,520 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,520 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,521 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,521 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,525 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,525 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,525 | INFO | scanner.scanSingleManifest:257 | FORENSICS scanSingleManifest START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,525 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,525 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,529 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,529 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,529 | INFO | scanner.scanSingleManifest:259 | FORENSICS scanSingleManifest BRANCH path='FORENSICS_DEMO/privileged-pod.yaml' valid_k8s=True valid_helm=False
+2026-11-25 15:13:02,529 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,532 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,532 | INFO | scanner.scanSingleManifest:344 | FORENSICS scanSingleManifest END path='FORENSICS_DEMO/privileged-pod.yaml' within_unames=0 within_pwds=0 within_tokens=0 template_matches=0 valid_taints=0
+2026-11-25 15:13:02,533 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,533 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,536 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,536 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,536 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,540 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,540 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,540 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,544 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,544 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,544 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,547 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,552 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,552 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,557 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,557 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,557 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,562 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,562 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,562 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,567 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,567 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,567 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,572 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,577 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,577 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,581 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,581 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,581 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,585 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,590 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,590 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,595 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,595 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,595 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,605 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,605 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,606 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,610 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,610 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,610 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,614 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,620 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,620 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,624 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,624 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,624 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,629 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,629 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,629 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,634 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,634 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,634 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,638 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,638 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,638 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,643 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,643 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,643 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,647 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,647 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,647 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,652 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,652 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,652 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,657 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,663 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,663 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,667 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,667 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,667 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,670 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,670 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,670 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,675 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,675 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,675 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,679 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,679 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,679 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,683 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,683 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,683 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,686 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,686 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,686 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,690 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,690 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,690 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,693 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,693 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,693 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,697 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,697 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/privileged-pod.yaml' result=True
+2026-11-25 15:13:02,697 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/privileged-pod.yaml'
+2026-11-25 15:13:02,701 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/privileged-pod.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,701 | INFO | scanner.runScanner:755 | FORENSICS runScanner SCANNED file='FORENSICS_DEMO/privileged-pod.yaml' k8s=True helm=False
+2026-11-25 15:13:02,705 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/ansible-task.yml'
+2026-11-25 15:13:02,705 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/ansible-task.yml'
+2026-11-25 15:13:02,707 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/ansible-task.yml' docs_loaded=1 doc_types=['CommentedSeq']
+2026-11-25 15:13:02,707 | INFO | parser.checkIfValidK8SYaml:114 | FORENSICS checkIfValidK8SYaml REJECT reason=missing_apiVersion_or_kind path='FORENSICS_DEMO/ansible-task.yml' has_apiVersion=False has_kind=False
+2026-11-25 15:13:02,707 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/ansible-task.yml' result=False
+2026-11-25 15:13:02,707 | INFO | scanner.runScanner:759 | FORENSICS runScanner SKIPPED_INVALID file='FORENSICS_DEMO/ansible-task.yml'
+2026-11-25 15:13:02,711 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,711 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,713 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,713 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,714 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,714 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,718 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,718 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,718 | INFO | scanner.scanSingleManifest:257 | FORENSICS scanSingleManifest START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,718 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,718 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,720 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,720 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,720 | INFO | scanner.scanSingleManifest:259 | FORENSICS scanSingleManifest BRANCH path='FORENSICS_DEMO/db-secret.yaml' valid_k8s=True valid_helm=False
+2026-11-25 15:13:02,720 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,722 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,722 | INFO | scanner.scanForSecrets:168 | FORENSICS scanForSecrets START input_type=dict top_level_keys=4
+2026-11-25 15:13:02,723 | WARNING | scanner.scanForSecrets:188 | FORENSICS scanForSecrets SECRET_FOUND key='db_password' usernames=0 passwords=1 keys=0
+2026-11-25 15:13:02,723 | WARNING | scanner.scanForSecrets:188 | FORENSICS scanForSecrets SECRET_FOUND key='db_user' usernames=1 passwords=0 keys=0
+2026-11-25 15:13:02,723 | INFO | scanner.scanForSecrets:191 | FORENSICS scanForSecrets END keys_scanned=7 keys_flagged=2
+2026-11-25 15:13:02,731 | INFO | scanner.scanSingleManifest:344 | FORENSICS scanSingleManifest END path='FORENSICS_DEMO/db-secret.yaml' within_unames=1 within_pwds=1 within_tokens=0 template_matches=0 valid_taints=0
+2026-11-25 15:13:02,731 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,731 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,734 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,734 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,734 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,737 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,737 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,737 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,740 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,740 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,740 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,743 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,743 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,743 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,746 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,746 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,746 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,748 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,748 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,749 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,752 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,752 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,752 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,755 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,756 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,756 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,758 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,758 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,758 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,760 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,760 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,760 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,762 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,762 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,762 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,764 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,764 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,764 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,766 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,767 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,767 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,769 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,770 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,770 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,772 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,772 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,772 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,775 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,775 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,775 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,778 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,778 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,778 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,781 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,781 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,781 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,784 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,784 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,785 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,787 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,787 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,787 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,789 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,789 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,789 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,792 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,792 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,792 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,794 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,794 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,794 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,796 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,796 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,796 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,799 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,799 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,799 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,802 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,802 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,802 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,804 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,804 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,804 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,807 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,808 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,808 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,810 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,810 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,810 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,813 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,813 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,813 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,816 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,816 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/db-secret.yaml' result=True
+2026-11-25 15:13:02,816 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/db-secret.yaml'
+2026-11-25 15:13:02,820 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/db-secret.yaml' docs_loaded=1 doc_types=['CommentedMap']
+2026-11-25 15:13:02,820 | INFO | scanner.runScanner:755 | FORENSICS runScanner SCANNED file='FORENSICS_DEMO/db-secret.yaml' k8s=True helm=False
+2026-11-25 15:13:02,826 | INFO | parser.checkIfValidK8SYaml:97 | FORENSICS checkIfValidK8SYaml START path='FORENSICS_DEMO/broken.yaml'
+2026-11-25 15:13:02,826 | INFO | parser.loadMultiYAML:170 | FORENSICS loadMultiYAML START path='FORENSICS_DEMO/broken.yaml'
+2026-11-25 15:13:02,827 | WARNING | parser.loadMultiYAML:184 | FORENSICS loadMultiYAML PARSE_ERROR path='FORENSICS_DEMO/broken.yaml' docs_before_error=0 err='while parsing a flow sequence\n  in "FORENSICS_DEMO/broken.yaml", line 5, column 11\nexpected \',\' or \']\', but got \'<stream end>\'\n  in "FORENSICS_DEMO/broken.yaml", line 6, column 1'
+2026-11-25 15:13:02,828 | INFO | parser.loadMultiYAML:214 | FORENSICS loadMultiYAML END path='FORENSICS_DEMO/broken.yaml' docs_loaded=0 doc_types=[]
+2026-11-25 15:13:02,828 | INFO | parser.checkIfValidK8SYaml:114 | FORENSICS checkIfValidK8SYaml REJECT reason=missing_apiVersion_or_kind path='FORENSICS_DEMO/broken.yaml' has_apiVersion=False has_kind=False
+2026-11-25 15:13:02,828 | INFO | parser.checkIfValidK8SYaml:116 | FORENSICS checkIfValidK8SYaml END path='FORENSICS_DEMO/broken.yaml' result=False
+2026-11-25 15:13:02,828 | INFO | scanner.runScanner:759 | FORENSICS runScanner SKIPPED_INVALID file='FORENSICS_DEMO/broken.yaml'
+2026-11-25 15:13:02,833 | INFO | scanner.runScanner:768 | FORENSICS runScanner END scanned=2 invalid=2 weird=0 sarif_results=8 elapsed_sec=0.32
+2026-11-25 15:13:22,685 | INFO | scanner.runScanner:658 | FORENSICS runScanner START dir='/tmp/claude-0/emptydir' dir_exists=True
+2026-11-25 15:13:22,685 | INFO | scanner.runScanner:661 | FORENSICS runScanner FOUND yaml_files=0
+2026-11-25 15:13:22,685 | WARNING | scanner.runScanner:663 | FORENSICS runScanner NO_YAML_FILES dir='/tmp/claude-0/emptydir' (sarif_json will be unbound -> UnboundLocalError)
+2026-11-25 15:13:22,685 | INFO | scanner.runScanner:768 | FORENSICS runScanner END scanned=0 invalid=0 weird=0 sarif_results=0 elapsed_sec=0.00

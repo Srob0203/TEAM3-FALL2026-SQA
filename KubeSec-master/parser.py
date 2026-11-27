@@ -14,6 +14,9 @@ import pathlib as pl
 import re
 import subprocess
 import os
+from forensics_logger import get_logger, safe_repr   # FORENSICS (4.b)
+
+logger = get_logger()   # FORENSICS (4.b)
 
 #update basepath
 base_path = r" "
@@ -91,7 +94,8 @@ def getValuesRecursively(  dict_   ) :
 
 
 def checkIfValidK8SYaml(path2yaml):
-    val2ret   = False 
+    logger.info("FORENSICS checkIfValidK8SYaml START path=%s", safe_repr(path2yaml))   # FORENSICS (4.b)
+    val2ret   = False
     dict_as_list = loadMultiYAML( path2yaml )
     yaml_dict    = getSingleDict4MultiDocs( dict_as_list )        
     k_list       = []
@@ -100,11 +104,16 @@ def checkIfValidK8SYaml(path2yaml):
     for k_ in k_list:
         temp_.append( k_[0]  )
     key_lis      = list( getValuesRecursively  ( yaml_dict ) )
-    if ( any(x_ in key_lis for x_ in constants.K8S_FORBIDDEN_KW_LIST ) ): 
-        val2ret = False 
-    else: 
+    if ( any(x_ in key_lis for x_ in constants.K8S_FORBIDDEN_KW_LIST ) ):
+        val2ret = False
+        logger.info("FORENSICS checkIfValidK8SYaml REJECT reason=forbidden_kind path=%s", safe_repr(path2yaml))   # FORENSICS (4.b)
+    else:
         if ( constants.API_V_KEYNAME in temp_ ) and (constants.KIND_KEY_NAME in temp_):
-            val2ret = True 
+            val2ret = True
+        else:
+            logger.info("FORENSICS checkIfValidK8SYaml REJECT reason=missing_apiVersion_or_kind path=%s has_apiVersion=%s has_kind=%s",
+                        safe_repr(path2yaml), constants.API_V_KEYNAME in temp_, constants.KIND_KEY_NAME in temp_)   # FORENSICS (4.b)
+    logger.info("FORENSICS checkIfValidK8SYaml END path=%s result=%s", safe_repr(path2yaml), val2ret)   # FORENSICS (4.b)
     return val2ret
 
 
@@ -158,21 +167,27 @@ def checkParseError( path_script ):
     return flag
 
 def loadMultiYAML( script_ ):
-    dicts2ret = []  
+    logger.info("FORENSICS loadMultiYAML START path=%s", safe_repr(script_))   # FORENSICS (4.b)
+    if not os.path.isfile(str(script_)):
+        logger.error("FORENSICS loadMultiYAML MISSING_FILE path=%s", safe_repr(script_))   # FORENSICS (4.b)
+    dicts2ret = []
     with open(script_, constants.FILE_READ_FLAG  ) as yml_content :
         yaml = ruamel.yaml.YAML()
-        yaml.default_flow_style = False      
+        yaml.default_flow_style = False
         try:
-            for d_ in yaml.load_all(yml_content) :                
+            for d_ in yaml.load_all(yml_content) :
                 # print('='*25)
                 # print(d_)
                 dicts2ret.append( d_ )
         except ruamel.yaml.parser.ParserError as parse_error:
-            print(constants.YAML_SKIPPING_TEXT)           
+            print(constants.YAML_SKIPPING_TEXT)
+            logger.warning("FORENSICS loadMultiYAML PARSE_ERROR path=%s docs_before_error=%d err=%s", safe_repr(script_), len(dicts2ret), safe_repr(str(parse_error)))   # FORENSICS (4.b)
         except ruamel.yaml.error.YAMLError as exc:
-            print( constants.YAML_SKIPPING_TEXT  )    
-        except UnicodeDecodeError as err_: 
             print( constants.YAML_SKIPPING_TEXT  )
+            logger.warning("FORENSICS loadMultiYAML YAML_ERROR path=%s docs_before_error=%d err=%s", safe_repr(script_), len(dicts2ret), safe_repr(str(exc)))   # FORENSICS (4.b)
+        except UnicodeDecodeError as err_:
+            print( constants.YAML_SKIPPING_TEXT  )
+            logger.warning("FORENSICS loadMultiYAML UNICODE_ERROR path=%s err=%s", safe_repr(script_), safe_repr(str(err_)))   # FORENSICS (4.b)
         
         path = find_json_path_keys(dicts2ret)
         #print(dicts2ret)
@@ -194,8 +209,10 @@ def loadMultiYAML( script_ ):
             # print(type(dicts2ret))
             # for d in dicts2ret:
             #     print(type(d))
-                
+
         #print(dicts2ret)
+    logger.info("FORENSICS loadMultiYAML END path=%s docs_loaded=%d doc_types=%s", safe_repr(script_), len(dicts2ret),
+                safe_repr([type(d).__name__ for d in dicts2ret]))   # FORENSICS (4.b)
     return dicts2ret
 
 

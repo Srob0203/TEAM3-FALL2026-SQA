@@ -6,7 +6,6 @@ on:
   push:
     branches:  
     - main
-    - fuzz-branch
 
   pull_request:
     branches: [main]
